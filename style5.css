@@ -1,0 +1,625 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+  } 
+  
+  
+  body.welcome{
+    background-image: url(image/chine2.png) ;
+    background-size: 100% 100%;  
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 100% , 100%;   
+  }
+  
+  .welcome .splash{
+      height: 0px;
+      padding: 0px;
+      border: 130em solid #0082e6;
+      position: fixed;
+      left: 50%;
+      top: 100%;
+      display: block;
+      box-sizing: initial;
+      overflow: hidden;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      animation: puff 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, borderRadius 0.2s 2.3s linear forwards;
+  }
+  
+  .welcome #welcome {
+      background: #311b92;
+      width: 56px;
+      height: 56px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      overflow: hidden;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, 
+      moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards,
+       moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, 
+       materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards,
+        hide 2s, 2.9s ease forwards;
+  }
+  
+  @keyframes init{
+      0%{
+          width: 0px;
+          height: 0px;
+      }
+      100%{
+          width: 56px;
+          height: 56px;
+          margin-top: 0px;
+          opacity: 1;
+      }
+  }
+  
+  @keyframes puff{
+      0%{
+          top: 100%;
+          height: 0px;
+          padding: 0px;
+      }
+      100%{
+          top: 50%;
+          height: 100%;
+          padding: 0px 100%;
+      }
+  }
+  
+  @keyframes borderRadius{
+      0%{
+          border-radius: 50%;
+      }
+      100%{
+          border-radius: 0px;
+      }
+  }
+  
+  @keyframes moveDown{
+      0%{
+          top: 50%;
+      }
+      50%{
+          top: 40%;
+      }
+      100%{
+          top: 100%;
+      }
+  }
+  
+  @keyframes moveUp{
+      0%{
+          background: #311b92;
+          top: 100%;
+      }
+      50%{
+          top: 40%;
+  
+      }
+      100%{
+          top: 50%;
+          background: #039be5;
+      }
+  }
+  
+  @keyframes materia{
+      0%{
+          background: #039be5;
+  
+  
+      }
+      50%{
+          background: #0082e6;
+          top: 26px;
+                  width: 0px;
+          height: 0px;
+      }
+  
+      100%{
+          background: #0082e6;
+          width: 100%;
+          height: 64px;
+          border-radius: 0px;
+          top: 26px;
+          width: 0px;
+          height: 0px;
+  
+      }
+  }
+  
+  @keyframes moveIn{
+      0%{
+          opacity: 0;
+      }
+      100%{
+          opacity: 1;
+      }
+  }
+  
+  @keyframes hide{
+      0%{
+          opacity: 1;
+      }
+  
+      100%{
+          opacity: 0;
+      }
+  }
+  
+  
+  
+  
+  nav{
+    background-attachment: fixed; 
+    height: auto;
+  }
+  nav{
+    background:#0082e6 ; 
+    height: 80px; 
+    width: 100%;
+  }
+  
+  label.logo{ 
+    color: whitesmoke; 
+    font-size: 35px; 
+    line-height:80px ; 
+    padding: 0 100px;
+    font-weight: bold;
+  
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #0082e6;
+    position: fixed; 
+    top: 0; 
+    width: 100%;
+    float: right;
+    z-index: 1000;
+        opacity: 0;
+      animation: moveIn 2s 3.1s ease forwards;
+    
+  } 
+  
+  
+  
+  
+  nav ul{
+    float: right;
+    
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px; 
+  
+  } 
+  
+  
+  .topnav a:link ,
+  .topnav a:visited {
+  
+      color: #F8F8FF;
+      margin-right: 0px;
+      padding: 0px 5px ;
+      height: 80px;
+      font-size: 17px; 
+      text-transform: uppercase;
+      text-align: center ;
+      text-decoration: none ;
+      display: block;
+  
+  
+  }
+  
+  .topnav a:hover {
+    background-color: #F8F8FF ;
+    color: #0082e6;
+  }
+  
+  .topnav a.active {
+    background-color: white;
+    color: #0082e6;
+  }
+  
+  
+  .centered{
+  width: 80%;
+    margin-top:19%; 
+   margin-left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    animation: moveIn 2s 3.1s ease forwards;
+  }
+  .text{
+    color: white;
+    font-style: italic;
+    font-size: 30px;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1;
+    width: 70%;
+    padding: 20px;
+  }
+  
+  
+  
+  
+  .container_span{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0;
+    animation: moveIn 2s 3.1s ease forwards;
+  
+  }
+  
+  .container1{
+    width: 20%;
+    height: 300px;
+    position: relative;
+    top: 66px;
+  
+    background-image: url(image/pekin12.jpg);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.8);
+    
+  }
+  .container1:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .container1 .image1{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  
+  }
+  .container1 .image1 span{
+    width: 100%;
+    height: 100%;
+    background-image: url(image/pekin_.jpg);
+    transition: .6s ease-in-out;
+  }
+  .container1 .image1 span:nth-child(1){
+    background-position: 0;
+    transition-delay: 0s;
+  }
+  .container1 .image1 span:nth-child(2){
+    background-position: 33.33%;
+    transition-delay: 0.1s;
+  }
+  .container1 .image1 span:nth-child(3){
+    background-position: 66.66%;
+    transition-delay: 0.2s;
+  }
+  .container1 .image1 span:nth-child(4){
+    background-position: 99.99%;
+    transition-delay: 0.3s;
+  }
+  
+  .container1:hover .image1 > span{
+    transform: translateY(-100%);
+  }
+  .content1{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    transform: translateY(100%);
+  }
+  .container1:hover .content1{
+    transform: translateY(0%);
+    transition: 1s;
+    transition-delay: 0.1s;
+  }
+  
+  
+  
+  .container2{
+    width: 20%;
+    height: 300px;
+    position: relative;
+    top: 66px;
+  
+    background-image: url(image/hong.jpg);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.8);
+    flex-direction: row;
+  }
+  .container2:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .container2 .image2{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  
+  }
+  .container2 .image2 span{
+    width: 100%;
+    height: 100%;
+    background-image: url(image/hong1.jpg);
+    transition: .6s ease-in-out;
+  }
+  .container2 .image2 span:nth-child(1){
+    background-position: 0;
+    transition-delay: 0s;
+  }
+  .container2 .image2 span:nth-child(2){
+    background-position: 33.33%;
+    transition-delay: 0.1s;
+  }
+  .container2 .image2 span:nth-child(3){
+    background-position: 66.66%;
+    transition-delay: 0.2s;
+  }
+  .container2 .image2 span:nth-child(4){
+    background-position: 99.99%;
+    transition-delay: 0.3s;
+  }
+  
+  .container2:hover .image2 > span{
+    transform: translateY(-100%);
+  }
+  .content2{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    transform: translateY(100%);
+  }
+  .container2:hover .content2{
+    transform: translateY(0%);
+    transition: 1s;
+    transition-delay: 0.1s;
+  }
+  
+  
+  
+  .container3{
+    width: 20%;
+    height: 300px;
+    position: relative;
+    top: 66px;
+  
+    background-image: url(image/shanghai1.jpg);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.8);
+    flex-direction: row;
+  }
+  .container3:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .container3 .image3{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  
+  }
+  .container3 .image3 span{
+    width: 100%;
+    height: 100%;
+    background-image: url(image/shanghai.jpeg);
+    transition: .6s ease-in-out;
+  }
+  .container3 .image3 span:nth-child(1){
+    background-position: 0;
+    transition-delay: 0s;
+  }
+  .container3 .image3 span:nth-child(2){
+    background-position: 33.33%;
+    transition-delay: 0.1s;
+  }
+  .container3 .image3 span:nth-child(3){
+    background-position: 66.66%;
+    transition-delay: 0.2s;
+  }
+  .container3 .image3 span:nth-child(4){
+    background-position: 99.99%;
+    transition-delay: 0.3s;
+  }
+  
+  .container3:hover .image3 > span{
+    transform: translateY(-100%);
+  }
+  .content3{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    transform: translateY(100%);
+  }
+  .container3:hover .content3{
+    transform: translateY(0%);
+    transition: 1s;
+    transition-delay: 0.1s;
+  }
+  
+  
+  
+  .container4{
+    width: 20%;
+    height: 300px;
+    position: relative;
+    top: 66px;
+    background-image: url(image/shenzhen_.jpg);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.8);
+    flex-direction: row;
+  }
+  .container4:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .container4 .image4{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  
+  }
+  .container4 .image4 span{
+    width: 100%;
+    height: 100%;
+    background-image: url(image/shenzhen.jpg);
+    transition: .6s ease-in-out;
+  }
+  .container4 .image4 span:nth-child(1){
+    background-position: 0;
+    transition-delay: 0s;
+  }
+  .container4 .image4 span:nth-child(2){
+    background-position: 33.33%;
+    transition-delay: 0.1s;
+  }
+  .container4 .image4 span:nth-child(3){
+    background-position: 66.66%;
+    transition-delay: 0.2s;
+  }
+  .container4 .image4 span:nth-child(4){
+    background-position: 99.99%;
+    transition-delay: 0.3s;
+  }
+  
+  .container4:hover .image4 > span{
+    transform: translateY(-100%);
+  }
+  .content4{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    transform: translateY(100%);
+  }
+  .container4:hover .content4{
+    transform: translateY(0%);
+    transition: 1s;
+    transition-delay: 0.1s;
+  }
+  
+  
+  
+  .container5{
+    width: 20%;
+    height: 300px;
+    position: relative;
+    top: 66px;
+  
+    background-image: url(image/tianjin_.jpg);
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.8);
+    flex-direction: row;
+  }
+  .container5:before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .container5 .image5{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+  
+  }
+  .container5 .image5 span{
+    width: 100%;
+    height: 100%;
+    background-image: url(image/tianjin.jpg);
+    transition: .6s ease-in-out;
+  }
+  .container5 .image5 span:nth-child(1){
+    background-position: 0;
+    transition-delay: 0s;
+  }
+  .container5 .image5 span:nth-child(2){
+    background-position: 33.33%;
+    transition-delay: 0.1s;
+  }
+  .container5 .image5 span:nth-child(3){
+    background-position: 66.66%;
+    transition-delay: 0.2s;
+  }
+  .container5 .image5 span:nth-child(4){
+    background-position: 99.99%;
+    transition-delay: 0.3s;
+  }
+  
+  .container5:hover .image5 > span{
+    transform: translateY(-100%);
+  }
+  .content5{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    transform: translateY(100%);
+  }
+  .container5:hover .content5{
+    transform: translateY(0%);
+    transition: 1s;
+    transition-delay: 0.1s;
+  }
+  
